@@ -44,7 +44,10 @@ static bool
 isdir(const char *path, const char *dirname)
 {
 	char buf[4096];
-	snprintf(buf, sizeof(buf), "%s/%s", path, dirname);
+	int ret = snprintf(buf, sizeof(buf), "%s/%s", path, dirname);
+	if (ret < 0) {
+		return false;
+	}
 	struct stat st;
 	return (!stat(buf, &st) && S_ISDIR(st.st_mode));
 }
@@ -73,7 +76,10 @@ add_theme_if_icon_theme(struct themes *themes, const char *path)
 		}
 
 		char buf[4096];
-		snprintf(buf, sizeof(buf), "%s/%s", path, entry->d_name);
+		int ret = snprintf(buf, sizeof(buf), "%s/%s", path, entry->d_name);
+		if (ret < 0) {
+			return;
+		}
 		/* filter 'hicolor' as it is not a complete icon set */
 		if (strstr(buf, "hicolor") != NULL) {
 			continue;
@@ -141,7 +147,10 @@ process_dir(struct themes *themes, const char *path, const char *filename)
 	while ((entry = readdir(dp))) {
 		if (entry->d_name[0] != '.' && isdir(path, entry->d_name)) {
 			char buf[4096];
-			snprintf(buf, sizeof(buf), "%s/%s/%s", path, entry->d_name, filename);
+			int ret = snprintf(buf, sizeof(buf), "%s/%s/%s", path, entry->d_name, filename);
+			if (ret < 0) {
+				return;
+			}
 			/* filter 'hicolor' as it is not a complete icon set */
 			if (strstr(buf, "hicolor") != NULL) {
 				continue;
@@ -183,15 +192,22 @@ void
 theme_find(struct themes *themes, const char *middle, const char *end)
 {
 	char path[4096];
+	int ret;
 	for (uint32_t i = 0; i < ARRAY_SIZE(dirs); ++i) {
 		if (dirs[i].prefix) {
 			char *prefix = getenv(dirs[i].prefix);
 			if (!prefix) {
 				continue;
 			}
-			snprintf(path, sizeof(path), "%s/%s/%s", prefix, dirs[i].path, middle);
+			ret = snprintf(path, sizeof(path), "%s/%s/%s", prefix, dirs[i].path, middle);
+			if (ret < 0) {
+				return;
+			}
 		} else {
-			snprintf(path, sizeof(path), "%s/%s", dirs[i].path, middle);
+			ret = snprintf(path, sizeof(path), "%s/%s", dirs[i].path, middle);
+			if (ret < 0) {
+				return;
+			}
 		}
 
 		if (end) {

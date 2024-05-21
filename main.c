@@ -20,7 +20,7 @@ activate(GtkApplication *app, gpointer user_data)
 
 	/* window */
 	state->window = gtk_application_window_new(app);
-	gtk_window_set_title(GTK_WINDOW(state->window), "Tweaks");
+	gtk_window_set_title(GTK_WINDOW(state->window), "Tweaks GTK");
 
 	/* grid */
 	GtkWidget *grid = gtk_grid_new();

@@ -1,5 +1,5 @@
 project(
-  'labwc-tweaks',
+  'labwc-tweaks-gtk',
   'c',
   version: '0.1.0',
   license: 'GPL-2.0-only',

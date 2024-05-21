@@ -2,7 +2,7 @@
 Name=Labwc Config
 GenericName=Labwc Configuration
 Comment=Configure settings for Labwc
-Exec=labwc-tweaks
-Icon=labwc-tweaks
+Exec=labwc-tweaks-gtk
+Icon=labwc-tweaks-gtk
 Type=Application
 Categories=Settings;System;

@@ -1,4 +1,4 @@
-# labwc-tweaks
+# labwc-tweaks-gtk
 
 This is a [WIP] configuration gui app for labwc without any real plan or
 Acceptance Criteria. It was merely written to help change themes for the

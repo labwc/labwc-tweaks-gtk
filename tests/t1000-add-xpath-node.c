@@ -44,7 +44,9 @@ int main(int argc, char **argv)
 	int fd = mkstemp(in);
 	if (fd < 0)
 		exit(EXIT_FAILURE);
-	write(fd, template, sizeof(template) - 1);
+	int ret = write(fd, template, sizeof(template) - 1);
+	if (ret < 0)
+		exit(EXIT_FAILURE);
 
 	/* test 1 */
 	diag("add node <theme><cornerradius> using xpath (lowercase)");

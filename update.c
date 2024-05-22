@@ -75,7 +75,7 @@ update(GtkWidget *widget, gpointer data)
 
 	/* reconfigure labwc */
 	if (!fork()) {
-		execl("/bin/sh", "/bin/sh", "-c", "killall -s SIGHUP labwc", (void *)NULL);
+		execl("/bin/sh", "/bin/sh", "-c", "labwc -r", (void *)NULL);
 	}
 }
 

@@ -59,10 +59,10 @@ stack_appearance_init(struct state *state, GtkWidget *stack)
 	gtk_combo_box_text_append_text(GTK_COMBO_BOX_TEXT(state->widgets.button_layout ), "WLC");
 	gtk_combo_box_text_append_text(GTK_COMBO_BOX_TEXT(state->widgets.button_layout ), "ILMC");
 	gtk_combo_box_text_append_text(GTK_COMBO_BOX_TEXT(state->widgets.button_layout ), "WLIMC");
-	gtk_combo_box_text_append_text(GTK_COMBO_BOX_TEXT(state->widgets.button_layout ), "CMIL");
 	gtk_combo_box_text_append_text(GTK_COMBO_BOX_TEXT(state->widgets.button_layout ), "CIML");
 	gtk_combo_box_text_append_text(GTK_COMBO_BOX_TEXT(state->widgets.button_layout ), "CLM");
-	gtk_combo_box_text_append_text(GTK_COMBO_BOX_TEXT(state->widgets.button_layout ), "W|C");
+	gtk_combo_box_text_append_text(GTK_COMBO_BOX_TEXT(state->widgets.button_layout ), "MLC");
+	gtk_combo_box_text_append_text(GTK_COMBO_BOX_TEXT(state->widgets.button_layout ), "WLDSIMC");
 	gtk_combo_box_set_active(GTK_COMBO_BOX(state->widgets.button_layout),xml_get_int("/labwc_config/theme/titleLayout"));
 	gtk_grid_attach(GTK_GRID(grid), state->widgets.button_layout , 1, row++, 1, 1);
 

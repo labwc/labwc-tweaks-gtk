@@ -15,6 +15,8 @@ struct state {
 		GtkWidget *cursor_theme_name;
 		GtkWidget *cursor_size;
 		GtkWidget *natural_scroll;
+		GtkWidget *double_click_time;
+		GtkWidget *top_max;
 		GtkWidget *keyboard_layout;
 	} widgets;
 	GSettings *settings;

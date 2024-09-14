@@ -60,5 +60,29 @@ stack_mouse_init(struct state *state, GtkWidget *stack)
 	gtk_combo_box_text_append_text(GTK_COMBO_BOX_TEXT(state->widgets.natural_scroll), "yes");
 	gtk_combo_box_set_active(GTK_COMBO_BOX(state->widgets.natural_scroll), xml_get_bool_text("/labwc_config/libinput/device/naturalscroll"));
 	gtk_grid_attach(GTK_GRID(grid), state->widgets.natural_scroll, 1, row++, 1, 1);
+	
+	
+		/*  */
+	widget = gtk_label_new("top maximize");
+	gtk_widget_set_halign(widget, GTK_ALIGN_START);
+	gtk_grid_attach(GTK_GRID(grid), widget, 0, row, 1, 1);
+	state->widgets.top_max = gtk_combo_box_text_new();
+	gtk_combo_box_text_append_text(GTK_COMBO_BOX_TEXT(state->widgets.top_max), "no");
+	gtk_combo_box_text_append_text(GTK_COMBO_BOX_TEXT(state->widgets.top_max), "yes");
+	gtk_combo_box_set_active(GTK_COMBO_BOX(state->widgets.top_max), xml_get_bool_text("/labwc_config/snapping/topMaximize"));
+	gtk_grid_attach(GTK_GRID(grid), state->widgets.top_max, 1, row++, 1, 1);
+	
+	
+	/* double click */
+	widget = gtk_label_new("double click time");
+	gtk_widget_set_halign(widget, GTK_ALIGN_START);
+	gtk_grid_attach(GTK_GRID(grid), widget, 0, row, 1, 1);
+	GtkAdjustment *click_adjustment = gtk_adjustment_new(0, 0, 4000, 100, 2, 0);
+	state->widgets.double_click_time = gtk_spin_button_new(GTK_ADJUSTMENT(click_adjustment), 1, 0);
+	gtk_spin_button_set_value(GTK_SPIN_BUTTON(state->widgets.double_click_time), xml_get_int("/labwc_config/mouse/doubleClickTime"));
+	gtk_grid_attach(GTK_GRID(grid), state->widgets.double_click_time, 1, row++, 1, 1);
+	
+	
+	
 }
 

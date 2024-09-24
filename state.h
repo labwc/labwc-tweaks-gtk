@@ -8,6 +8,7 @@ struct state {
 	struct {
 		GtkWidget *corner_radius;
 		GtkWidget *button_layout;
+		GtkWidget *show_title;
 		GtkWidget *drop_shadows;
 		GtkWidget *openbox_theme_name;
 		GtkWidget *gtk_theme_name;

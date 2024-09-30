@@ -14,6 +14,7 @@ struct state {
 		GtkWidget *cursor_size;
 		GtkWidget *natural_scroll;
 		GtkWidget *keyboard_layout;
+		GtkWidget *drop_shadows;
 	} widgets;
 	GSettings *settings;
 };

@@ -45,10 +45,20 @@ stack_appearance_init(struct state *state, GtkWidget *stack)
 	widget = gtk_label_new("corner radius");
 	gtk_widget_set_halign(widget, GTK_ALIGN_START);
 	gtk_grid_attach(GTK_GRID(grid), widget, 0, row, 1, 1);
-	GtkAdjustment *adjustment = gtk_adjustment_new(0, 0, 10, 1, 2, 0);
+	GtkAdjustment *adjustment = gtk_adjustment_new(0, 0, 20, 1, 2, 0);
 	state->widgets.corner_radius = gtk_spin_button_new(GTK_ADJUSTMENT(adjustment), 1, 0);
 	gtk_spin_button_set_value(GTK_SPIN_BUTTON(state->widgets.corner_radius), xml_get_int("/labwc_config/theme/cornerradius"));
 	gtk_grid_attach(GTK_GRID(grid), state->widgets.corner_radius, 1, row++, 1, 1);
+
+	/* drop shadows */
+	widget = gtk_label_new("drop shadows");
+	gtk_widget_set_halign(widget, GTK_ALIGN_START);
+	gtk_grid_attach(GTK_GRID(grid), widget, 0, row, 1, 1);
+	state->widgets.drop_shadows = gtk_combo_box_text_new();
+	gtk_combo_box_text_append_text(GTK_COMBO_BOX_TEXT(state->widgets.drop_shadows), "no");
+	gtk_combo_box_text_append_text(GTK_COMBO_BOX_TEXT(state->widgets.drop_shadows), "yes");
+	gtk_combo_box_set_active(GTK_COMBO_BOX(state->widgets.drop_shadows), xml_get_bool_text("/labwc_config/theme/dropShadows"));
+	gtk_grid_attach(GTK_GRID(grid), state->widgets.drop_shadows, 1, row++, 1, 1);	
 
 	/* gtk theme combobox */
 	struct themes gtk_themes = { 0 };

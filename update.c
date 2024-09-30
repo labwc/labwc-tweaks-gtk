@@ -56,6 +56,7 @@ update(GtkWidget *widget, gpointer data)
 	xml_set_num("/labwc_config/theme/cornerradius", SPIN_BUTTON_VAL(state->widgets.corner_radius));
 	xml_set("/labwc_config/theme/name", COMBO_TEXT(state->widgets.openbox_theme_name));
 	xml_set("/labwc_config/libinput/device/naturalscroll", COMBO_TEXT(state->widgets.natural_scroll));
+	xml_set("/labwc_config/theme/dropShadows", COMBO_TEXT(state->widgets.drop_shadows));
 	xml_save();
 
 	/* gsettings */

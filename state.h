@@ -15,6 +15,8 @@ struct state {
 		GtkWidget *natural_scroll;
 		GtkWidget *keyboard_layout;
 		GtkWidget *drop_shadows;
+		GtkWidget *button_layout;
+		GtkWidget *show_title;
 	} widgets;
 	GSettings *settings;
 };

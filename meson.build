@@ -19,6 +19,7 @@ executable(
     'theme.c',
     'keyboard-layouts.c',
     'stack-appearance.c',
+    'stack-behaviour.c',
     'stack-lang.c',
     'stack-mouse.c',
     'update.c',

@@ -62,16 +62,6 @@ stack_mouse_init(struct state *state, GtkWidget *stack)
 	gtk_grid_attach(GTK_GRID(grid), state->widgets.natural_scroll, 1, row++, 1, 1);
 	
 	
-		/*  */
-	widget = gtk_label_new("top maximize");
-	gtk_widget_set_halign(widget, GTK_ALIGN_START);
-	gtk_grid_attach(GTK_GRID(grid), widget, 0, row, 1, 1);
-	state->widgets.top_max = gtk_combo_box_text_new();
-	gtk_combo_box_text_append_text(GTK_COMBO_BOX_TEXT(state->widgets.top_max), "no");
-	gtk_combo_box_text_append_text(GTK_COMBO_BOX_TEXT(state->widgets.top_max), "yes");
-	gtk_combo_box_set_active(GTK_COMBO_BOX(state->widgets.top_max), xml_get_bool_text("/labwc_config/snapping/topMaximize"));
-	gtk_grid_attach(GTK_GRID(grid), state->widgets.top_max, 1, row++, 1, 1);
-	
 	
 	/* double click */
 	widget = gtk_label_new("double click time");

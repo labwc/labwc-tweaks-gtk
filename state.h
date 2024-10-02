@@ -19,6 +19,8 @@ struct state {
 		GtkWidget *double_click_time;
 		GtkWidget *top_max;
 		GtkWidget *keyboard_layout;
+		GtkWidget *placement;
+
 	} widgets;
 	GSettings *settings;
 };

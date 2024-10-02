@@ -40,28 +40,6 @@ stack_appearance_init(struct state *state, GtkWidget *stack)
 	gtk_combo_box_set_active(GTK_COMBO_BOX(state->widgets.openbox_theme_name), active);
 	gtk_grid_attach(GTK_GRID(grid), state->widgets.openbox_theme_name, 1, row++, 1, 1);
 	theme_free_vector(&openbox_themes);
-
-/* titlebar font  */
-	widget = gtk_label_new("titlebar font");
-	gtk_widget_set_halign(widget, GTK_ALIGN_START);
-	gtk_grid_attach(GTK_GRID(grid), widget, 0, row, 1, 1);
-        GtkWidget *fontchooser_title;
-        fontchooser_title = gtk_font_button_new ();
-
-        gtk_font_chooser_set_show_preview_entry (GTK_FONT_CHOOSER (fontchooser_title), FALSE);
-        gtk_font_chooser_set_font (GTK_FONT_CHOOSER (fontchooser_title), "Bitstream Vera Sans 12");
-	gtk_grid_attach(GTK_GRID(grid), fontchooser_title , 1, row++, 1, 1);
- 
- /* menu font  */
-	widget = gtk_label_new("menu font");
-	gtk_widget_set_halign(widget, GTK_ALIGN_START);
-	gtk_grid_attach(GTK_GRID(grid), widget, 0, row, 1, 1);
-        GtkWidget *fontchooser_menu;
-        fontchooser_menu = gtk_font_button_new ();
-
-        gtk_font_chooser_set_show_preview_entry (GTK_FONT_CHOOSER (fontchooser_menu), FALSE);
-        gtk_font_chooser_set_font (GTK_FONT_CHOOSER (fontchooser_menu), "Bitstream Vera Sans 12");
-	gtk_grid_attach(GTK_GRID(grid), fontchooser_menu , 1, row++, 1, 1);
 	
 /* corner radius spinbutton */
 	widget = gtk_label_new("corner radius");
@@ -77,16 +55,8 @@ stack_appearance_init(struct state *state, GtkWidget *stack)
 	widget = gtk_label_new("button layout");
 	gtk_widget_set_halign(widget, GTK_ALIGN_START);
 	gtk_grid_attach(GTK_GRID(grid), widget, 0, row, 1, 1);
-/*	
 	state->widgets.button_layout = gtk_entry_new();
-*/	
-	state->widgets.button_layout = gtk_combo_box_text_new();
-	
-	gtk_combo_box_text_append_text(GTK_COMBO_BOX_TEXT(state->widgets.button_layout ), "menu:close");
-	gtk_combo_box_text_append_text(GTK_COMBO_BOX_TEXT(state->widgets.button_layout ), "menu:iconify,max,close");
-	gtk_combo_box_text_append_text(GTK_COMBO_BOX_TEXT(state->widgets.button_layout ), "iconify:max,close");
-	gtk_combo_box_text_append_text(GTK_COMBO_BOX_TEXT(state->widgets.button_layout ), "menu:desk,shade,iconify,max,close");
-	gtk_combo_box_set_active(GTK_COMBO_BOX(state->widgets.button_layout),xml_get_int("/labwc_config/theme/titlebar/layout"));
+	gtk_entry_set_text(GTK_ENTRY(state->widgets.button_layout), xml_get("/labwc_config/theme/titlebar/layout"));
 	gtk_grid_attach(GTK_GRID(grid), state->widgets.button_layout , 1, row++, 1, 1);
 
 /* show title? */

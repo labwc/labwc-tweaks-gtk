@@ -50,6 +50,25 @@ stack_appearance_init(struct state *state, GtkWidget *stack)
 	gtk_spin_button_set_value(GTK_SPIN_BUTTON(state->widgets.corner_radius), xml_get_int("/labwc_config/theme/cornerradius"));
 	gtk_grid_attach(GTK_GRID(grid), state->widgets.corner_radius, 1, row++, 1, 1);
 
+        /* button layout */
+	widget = gtk_label_new("button layout");
+	gtk_widget_set_halign(widget, GTK_ALIGN_START);
+	gtk_grid_attach(GTK_GRID(grid), widget, 0, row, 1, 1);
+	state->widgets.button_layout = gtk_entry_new();
+	gtk_entry_set_text(GTK_ENTRY(state->widgets.button_layout), xml_get("/labwc_config/theme/titlebar/layout"));
+	gtk_grid_attach(GTK_GRID(grid), state->widgets.button_layout , 1, row++, 1, 1);
+
+        /* show title? */
+	widget = gtk_label_new("show title");
+	gtk_widget_set_halign(widget, GTK_ALIGN_START);
+	gtk_grid_attach(GTK_GRID(grid), widget, 0, row, 1, 1);
+	state->widgets.show_title = gtk_combo_box_text_new();
+	gtk_combo_box_text_append_text(GTK_COMBO_BOX_TEXT(state->widgets.show_title), "no");
+	gtk_combo_box_text_append_text(GTK_COMBO_BOX_TEXT(state->widgets.show_title), "yes");
+        gtk_combo_box_set_active(GTK_COMBO_BOX(state->widgets.show_title), xml_get_bool_text("/labwc_config/theme/titlebar/showTitle"));
+	gtk_grid_attach(GTK_GRID(grid), state->widgets.show_title, 1, row++, 1, 1);
+
+
 	/* drop shadows */
 	widget = gtk_label_new("drop shadows");
 	gtk_widget_set_halign(widget, GTK_ALIGN_START);

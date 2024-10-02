@@ -46,6 +46,7 @@ set_value(GSettings *settings, const char *key, const char *value)
 #define COMBO_TEXT(w) gtk_combo_box_text_get_active_text(GTK_COMBO_BOX_TEXT(w))
 #define SPIN_BUTTON_VAL(w) gtk_spin_button_get_value(GTK_SPIN_BUTTON(w))
 #define SPIN_BUTTON_VAL_INT(w) (int)SPIN_BUTTON_VAL(w)
+#define GTK_ENTRY_TEXT(w) gtk_entry_get_text(GTK_ENTRY(w))
 
 void
 update(GtkWidget *widget, gpointer data)
@@ -57,6 +58,8 @@ update(GtkWidget *widget, gpointer data)
 	xml_set("/labwc_config/theme/name", COMBO_TEXT(state->widgets.openbox_theme_name));
 	xml_set("/labwc_config/libinput/device/naturalscroll", COMBO_TEXT(state->widgets.natural_scroll));
 	xml_set("/labwc_config/theme/dropShadows", COMBO_TEXT(state->widgets.drop_shadows));
+	xml_set("/labwc_config/theme/titlebar/layout", GTK_ENTRY_TEXT(state->widgets.button_layout));
+	xml_set("/labwc_config/theme/titlebar/showTitle", COMBO_TEXT(state->widgets.show_title));
 	xml_save();
 
 	/* gsettings */

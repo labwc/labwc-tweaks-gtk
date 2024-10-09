@@ -27,7 +27,7 @@ stack_lang_init(struct state *state, GtkWidget *stack)
 	GList *keyboard_layouts = NULL;
 	keyboard_layouts_init(&keyboard_layouts, "/usr/share/X11/xkb/rules/evdev.lst");
 
-	widget = gtk_label_new("keyboard layout");
+	widget = gtk_label_new("Keyboard Layout");
 	gtk_widget_set_halign(widget, GTK_ALIGN_START);
 	gtk_grid_attach(GTK_GRID(grid), widget, 0, row, 1, 1);
 	state->widgets.keyboard_layout = gtk_combo_box_text_new();

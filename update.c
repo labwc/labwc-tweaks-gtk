@@ -58,7 +58,7 @@ update(GtkWidget *widget, gpointer data)
 	xml_set("/labwc_config/theme/name", COMBO_TEXT(state->widgets.openbox_theme_name));
 	xml_set("/labwc_config/libinput/device/naturalscroll", COMBO_TEXT(state->widgets.natural_scroll));
 	xml_set("/labwc_config/theme/dropShadows", COMBO_TEXT(state->widgets.drop_shadows));
-	xml_set("/labwc_config/theme/titlebar/layout", GTK_ENTRY_TEXT(state->widgets.button_layout));
+	xml_set("/labwc_config/theme/titlebar/layout", (char *)GTK_ENTRY_TEXT(state->widgets.button_layout));
 	xml_set("/labwc_config/theme/titlebar/showTitle", COMBO_TEXT(state->widgets.show_title));
 	xml_save();
 

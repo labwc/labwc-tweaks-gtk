@@ -24,7 +24,7 @@ stack_mouse_init(struct state *state, GtkWidget *stack)
 	struct themes cursor_themes = { 0 };
 	theme_find(&cursor_themes, "icons", "cursors");
 
-	widget = gtk_label_new("cursor theme");
+	widget = gtk_label_new("Cursor Theme");
 	gtk_widget_set_halign(widget, GTK_ALIGN_START);
 	gtk_grid_attach(GTK_GRID(grid), widget, 0, row, 1, 1);
 	state->widgets.cursor_theme_name = gtk_combo_box_text_new();
@@ -43,7 +43,7 @@ stack_mouse_init(struct state *state, GtkWidget *stack)
 	theme_free_vector(&cursor_themes);
 
 	/* cursor size spinbutton */
-	widget = gtk_label_new("cursor size");
+	widget = gtk_label_new("Cursor Size");
 	gtk_widget_set_halign(widget, GTK_ALIGN_START);
 	gtk_grid_attach(GTK_GRID(grid), widget, 0, row, 1, 1);
 	GtkAdjustment *cursor_adjustment = gtk_adjustment_new(0, 0, 512, 1, 2, 0);
@@ -52,7 +52,7 @@ stack_mouse_init(struct state *state, GtkWidget *stack)
 	gtk_grid_attach(GTK_GRID(grid), state->widgets.cursor_size, 1, row++, 1, 1);
 
 	/* natural scroll combobox */
-	widget = gtk_label_new("natural scroll");
+	widget = gtk_label_new("Natural Scroll");
 	gtk_widget_set_halign(widget, GTK_ALIGN_START);
 	gtk_grid_attach(GTK_GRID(grid), widget, 0, row, 1, 1);
 	state->widgets.natural_scroll = gtk_combo_box_text_new();

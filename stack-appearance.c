@@ -23,7 +23,7 @@ stack_appearance_init(struct state *state, GtkWidget *stack)
 	/* openbox theme combobox */
 	struct themes openbox_themes = { 0 };
 	theme_find(&openbox_themes, "themes", "openbox-3/themerc");
-	widget = gtk_label_new("openbox theme");
+	widget = gtk_label_new("Openbox Theme");
 	gtk_widget_set_halign(widget, GTK_ALIGN_START);
 	gtk_grid_attach(GTK_GRID(grid), widget, 0, row, 1, 1);
 	state->widgets.openbox_theme_name = gtk_combo_box_text_new();
@@ -42,7 +42,7 @@ stack_appearance_init(struct state *state, GtkWidget *stack)
 	theme_free_vector(&openbox_themes);
 
 	/* corner radius spinbutton */
-	widget = gtk_label_new("corner radius");
+	widget = gtk_label_new("Corner Radius");
 	gtk_widget_set_halign(widget, GTK_ALIGN_START);
 	gtk_grid_attach(GTK_GRID(grid), widget, 0, row, 1, 1);
 	GtkAdjustment *adjustment = gtk_adjustment_new(0, 0, 20, 1, 2, 0);
@@ -51,7 +51,7 @@ stack_appearance_init(struct state *state, GtkWidget *stack)
 	gtk_grid_attach(GTK_GRID(grid), state->widgets.corner_radius, 1, row++, 1, 1);
 
         /* button layout */
-	widget = gtk_label_new("button layout");
+	widget = gtk_label_new("Button Layout");
 	gtk_widget_set_halign(widget, GTK_ALIGN_START);
 	gtk_grid_attach(GTK_GRID(grid), widget, 0, row, 1, 1);
 	state->widgets.button_layout = gtk_entry_new();
@@ -59,7 +59,7 @@ stack_appearance_init(struct state *state, GtkWidget *stack)
 	gtk_grid_attach(GTK_GRID(grid), state->widgets.button_layout , 1, row++, 1, 1);
 
         /* show title? */
-	widget = gtk_label_new("show title");
+	widget = gtk_label_new("Show Title");
 	gtk_widget_set_halign(widget, GTK_ALIGN_START);
 	gtk_grid_attach(GTK_GRID(grid), widget, 0, row, 1, 1);
 	state->widgets.show_title = gtk_combo_box_text_new();
@@ -70,7 +70,7 @@ stack_appearance_init(struct state *state, GtkWidget *stack)
 
 
 	/* drop shadows */
-	widget = gtk_label_new("drop shadows");
+	widget = gtk_label_new("Drop Shadows");
 	gtk_widget_set_halign(widget, GTK_ALIGN_START);
 	gtk_grid_attach(GTK_GRID(grid), widget, 0, row, 1, 1);
 	state->widgets.drop_shadows = gtk_combo_box_text_new();
@@ -83,7 +83,7 @@ stack_appearance_init(struct state *state, GtkWidget *stack)
 	struct themes gtk_themes = { 0 };
 	theme_find(&gtk_themes, "themes", "gtk-3.0/gtk.css");
 
-	widget = gtk_label_new("gtk theme");
+	widget = gtk_label_new("Gtk Theme");
 	gtk_widget_set_halign(widget, GTK_ALIGN_START);
 	gtk_grid_attach(GTK_GRID(grid), widget, 0, row, 1, 1);
 	state->widgets.gtk_theme_name = gtk_combo_box_text_new();
@@ -105,7 +105,7 @@ stack_appearance_init(struct state *state, GtkWidget *stack)
 	struct themes icon_themes = { 0 };
 	theme_find(&icon_themes, "icons", NULL);
 
-	widget = gtk_label_new("icon theme");
+	widget = gtk_label_new("Icon Theme");
 	gtk_widget_set_halign(widget, GTK_ALIGN_START);
 	gtk_grid_attach(GTK_GRID(grid), widget, 0, row, 1, 1);
 	state->widgets.icon_theme_name = gtk_combo_box_text_new();

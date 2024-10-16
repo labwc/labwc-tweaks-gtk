@@ -1,0 +1,89 @@
+# labwc-tweaks-gtk es po file
+# Copyright (C) 2024
+# This file is distributed under the same license as the labwc-tweaks-gtk package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: labwc-tweaks-gtk 0.1.0\n"
+"Report-Msgid-Bugs-To: https://github.com/labwc/labwc-tweaks-gtk/issues\n"
+"POT-Creation-Date: 2024-10-16 10:10+1000\n"
+"PO-Revision-Date: 2024-10-16 10:10+1000\n"
+"Last-Translator: Mick A <01micko@gmail.com>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. bottom buttons
+#: main.c:45
+msgid "Update"
+msgstr "Actualizar"
+
+#: main.c:48
+msgid "Quit"
+msgstr "Abandonar"
+
+#: stack-appearance.c:15
+msgid "Appearance"
+msgstr "Apariencia"
+
+#: stack-appearance.c:26
+msgid "Openbox Theme"
+msgstr "Tema de Openbox"
+
+#. corner radius spinbutton
+#: stack-appearance.c:45
+msgid "Corner Radius"
+msgstr "Radio de esquina"
+
+#. button layout
+#: stack-appearance.c:54
+msgid "Button Layout"
+msgstr "Diseño de botones"
+
+#. show title?
+#: stack-appearance.c:62
+msgid "Show Title"
+msgstr "Mostrar Titulo"
+
+#. drop shadows
+#: stack-appearance.c:73
+msgid "Drop Shadows"
+msgstr "Soltar sombras"
+
+#: stack-appearance.c:86
+msgid "Gtk Theme"
+msgstr "Tema de Gtk"
+
+#: stack-appearance.c:108
+msgid "Icon Theme"
+msgstr "Tema de Icono"
+
+#: stack-lang.c:18
+msgid "Language & Region"
+msgstr "Idioma y región"
+
+#: stack-lang.c:30
+msgid "Keyboard Layout"
+msgstr "Disposición de teclado"
+
+#: stack-mouse.c:15
+msgid "Mouse & Touchpad"
+msgstr "Ratón y panel táctil"
+
+#: stack-mouse.c:27
+msgid "Cursor Theme"
+msgstr "Tema de Cursores"
+
+#. cursor size spinbutton
+#: stack-mouse.c:46
+msgid "Cursor Size"
+msgstr "Tamaño de Cursores"
+
+#. natural scroll combobox
+#: stack-mouse.c:55
+msgid "Natural Scroll"
+msgstr "Desplazamiento Natural"

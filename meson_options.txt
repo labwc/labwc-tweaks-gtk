@@ -1,0 +1,1 @@
+option('nls', type: 'feature', value: 'auto', description: 'Enable native language support')

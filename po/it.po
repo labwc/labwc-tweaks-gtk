@@ -1,0 +1,89 @@
+# labwc-tweaks-gtk it po file
+# Copyright (C) 2024
+# This file is distributed under the same license as the labwc-tweaks-gtk package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: labwc-tweaks-gtk 0.1.0\n"
+"Report-Msgid-Bugs-To: https://github.com/labwc/labwc-tweaks-gtk/issues\n"
+"POT-Creation-Date: 2024-10-16 10:10+1000\n"
+"PO-Revision-Date: 2024-10-16 10:10+1000\n"
+"Last-Translator: Mick A <01micko@gmail.com>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. bottom buttons
+#: main.c:45
+msgid "Update"
+msgstr "Aggiornare"
+
+#: main.c:48
+msgid "Quit"
+msgstr "Lasciare"
+
+#: stack-appearance.c:15
+msgid "Appearance"
+msgstr "Aspetto"
+
+#: stack-appearance.c:26
+msgid "Openbox Theme"
+msgstr "Tema Openbox"
+
+#. corner radius spinbutton
+#: stack-appearance.c:45
+msgid "Corner Radius"
+msgstr "Raggio Angolo"
+
+#. button layout
+#: stack-appearance.c:54
+msgid "Button Layout"
+msgstr "Layout Pulsante"
+
+#. show title?
+#: stack-appearance.c:62
+msgid "Show Title"
+msgstr "Mostra Titolo"
+
+#. drop shadows
+#: stack-appearance.c:73
+msgid "Drop Shadows"
+msgstr "Abilita Ombre"
+
+#: stack-appearance.c:86
+msgid "Gtk Theme"
+msgstr "Tema Gtk"
+
+#: stack-appearance.c:108
+msgid "Icon Theme"
+msgstr "Tema Icon"
+
+#: stack-lang.c:18
+msgid "Language & Region"
+msgstr "Lingua e Paese"
+
+#: stack-lang.c:30
+msgid "Keyboard Layout"
+msgstr "Mappatura Tastiera"
+
+#: stack-mouse.c:15
+msgid "Mouse & Touchpad"
+msgstr "Mouse e Touchpad"
+
+#: stack-mouse.c:27
+msgid "Cursor Theme"
+msgstr "Tema Puntatore"
+
+#. cursor size spinbutton
+#: stack-mouse.c:46
+msgid "Cursor Size"
+msgstr "Grandezza Puntatore"
+
+#. natural scroll combobox
+#: stack-mouse.c:55
+msgid "Natural Scroll"
+msgstr "Scorrimento Naturale"

@@ -42,10 +42,10 @@ activate(GtkApplication *app, gpointer user_data)
 	stack_lang_init(state, stack);
 
 	/* bottom buttons */
-	GtkWidget *button = gtk_button_new_with_label("Update");
+	GtkWidget *button = gtk_button_new_with_label(_("Update"));
 	g_signal_connect(button, "clicked", G_CALLBACK(update), state);
 	gtk_container_add(GTK_CONTAINER(bottom_buttons), button);
-	button = gtk_button_new_with_label("Quit");
+	button = gtk_button_new_with_label(_("Quit"));
 	g_signal_connect_swapped(button, "clicked", G_CALLBACK(gtk_widget_destroy), state->window);
 	gtk_container_add(GTK_CONTAINER(bottom_buttons), button);
 	gtk_button_box_set_layout(GTK_BUTTON_BOX(bottom_buttons), GTK_BUTTONBOX_END);
@@ -57,6 +57,11 @@ activate(GtkApplication *app, gpointer user_data)
 int
 main(int argc, char **argv)
 {
+#if HAVE_NLS
+	setlocale(LC_ALL, "");
+	bindtextdomain(GETTEXT_PACKAGE, LOCALEDIR);
+	textdomain(GETTEXT_PACKAGE);
+#endif
 	struct state state = { 0 };
 
 	/* read/create config file */

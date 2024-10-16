@@ -15,7 +15,7 @@ stack_lang_init(struct state *state, GtkWidget *stack)
 
 	GtkWidget *vbox = gtk_box_new(GTK_ORIENTATION_VERTICAL, 0);
 	gtk_stack_add_named(GTK_STACK(stack), vbox, "lang");
-	gtk_container_child_set(GTK_CONTAINER(stack), vbox, "title", "Language & Region", NULL);
+	gtk_container_child_set(GTK_CONTAINER(stack), vbox, "title", _("Language & Region"), NULL);
 
 	/* the grid with settings */
 	int row = 0;
@@ -27,7 +27,7 @@ stack_lang_init(struct state *state, GtkWidget *stack)
 	GList *keyboard_layouts = NULL;
 	keyboard_layouts_init(&keyboard_layouts, "/usr/share/X11/xkb/rules/evdev.lst");
 
-	widget = gtk_label_new("Keyboard Layout");
+	widget = gtk_label_new(_("Keyboard Layout"));
 	gtk_widget_set_halign(widget, GTK_ALIGN_START);
 	gtk_grid_attach(GTK_GRID(grid), widget, 0, row, 1, 1);
 	state->widgets.keyboard_layout = gtk_combo_box_text_new();

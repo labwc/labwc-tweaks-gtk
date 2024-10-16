@@ -2,6 +2,14 @@
 #ifndef STATE_H
 #define STATE_H
 #include <gtk/gtk.h>
+#include "config.h"
+#if HAVE_NLS
+#include <libintl.h>
+#include <locale.h>
+#define _ gettext
+#else
+#define _(s) (s)
+#endif
 
 struct state {
 	GtkWidget *window;

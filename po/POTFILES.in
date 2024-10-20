@@ -2,3 +2,4 @@ main.c
 stack-appearance.c
 stack-lang.c
 stack-mouse.c
+data/labwc-tweaks-gtk.desktop.in

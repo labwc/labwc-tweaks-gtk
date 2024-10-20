@@ -87,3 +87,15 @@ msgstr "Grandezza Puntatore"
 #: stack-mouse.c:55
 msgid "Natural Scroll"
 msgstr "Scorrimento Naturale"
+
+#: data/labwc-tweaks-gtk.desktop.in:4
+msgid "Labwc Config"
+msgstr "Impostazioni Labwc"
+
+#: data/labwc-tweaks-gtk.desktop.in:5
+msgid "Labwc Configuration"
+msgstr "Impostazioni del gestore finestre labwc"
+
+#: data/labwc-tweaks-gtk.desktop.in:6
+msgid "Configure settings for Labwc"
+msgstr "Impostazioni di Labwc, gestore delle finestre in Wayland"

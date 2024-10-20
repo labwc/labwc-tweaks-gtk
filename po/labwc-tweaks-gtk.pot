@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: labwc-tweaks-gtk 0.1.0\n"
 "Report-Msgid-Bugs-To: https://github.com/labwc/labwc-tweaks-gtk/issues\n"
-"POT-Creation-Date: 2024-10-16 10:10+1000\n"
+"POT-Creation-Date: 2024-10-20 09:34+1000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -86,4 +86,16 @@ msgstr ""
 #. natural scroll combobox
 #: stack-mouse.c:55
 msgid "Natural Scroll"
+msgstr ""
+
+#: data/labwc-tweaks-gtk.desktop.in:4
+msgid "Labwc Config"
+msgstr ""
+
+#: data/labwc-tweaks-gtk.desktop.in:5
+msgid "Labwc Configuration"
+msgstr ""
+
+#: data/labwc-tweaks-gtk.desktop.in:6
+msgid "Configure settings for Labwc"
 msgstr ""

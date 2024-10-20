@@ -29,3 +29,11 @@ If you find it a useful tool and want to expand its scope, feel free.
 ### packages
 
 [![Packaging status](https://repology.org/badge/vertical-allrepos/labwc-tweaks.svg)](https://repology.org/project/labwc-tweaks/versions)
+
+### translation
+
+See [NLS instructions](./NLS.md) for information for translators and code contributors.
+
+#### translation status
+
+![status badge](https://hosted.weblate.org/widget/labwc-tweaks-gtk/multi-green.svg)

@@ -1,0 +1,100 @@
+# labwc-tweaks-gtk pot file
+# Copyright (C) 2024
+# This file is distributed under the same license as the labwc-tweaks-gtk package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: labwc-tweaks-gtk 0.1.0\n"
+"Report-Msgid-Bugs-To: https://github.com/labwc/labwc-tweaks-gtk/issues\n"
+"POT-Creation-Date: 2024-10-20 09:34+1000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: nb_NO\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. bottom buttons
+#: main.c:45
+msgid "Update"
+msgstr ""
+
+#: main.c:48
+msgid "Quit"
+msgstr ""
+
+#: stack-appearance.c:15
+msgid "Appearance"
+msgstr ""
+
+#: stack-appearance.c:26
+msgid "Openbox Theme"
+msgstr ""
+
+#. corner radius spinbutton
+#: stack-appearance.c:45
+msgid "Corner Radius"
+msgstr ""
+
+#. button layout
+#: stack-appearance.c:54
+msgid "Button Layout"
+msgstr ""
+
+#. show title?
+#: stack-appearance.c:62
+msgid "Show Title"
+msgstr ""
+
+#. drop shadows
+#: stack-appearance.c:73
+msgid "Drop Shadows"
+msgstr ""
+
+#: stack-appearance.c:86
+msgid "Gtk Theme"
+msgstr ""
+
+#: stack-appearance.c:108
+msgid "Icon Theme"
+msgstr ""
+
+#: stack-lang.c:18
+msgid "Language & Region"
+msgstr ""
+
+#: stack-lang.c:30
+msgid "Keyboard Layout"
+msgstr ""
+
+#: stack-mouse.c:15
+msgid "Mouse & Touchpad"
+msgstr ""
+
+#: stack-mouse.c:27
+msgid "Cursor Theme"
+msgstr ""
+
+#. cursor size spinbutton
+#: stack-mouse.c:46
+msgid "Cursor Size"
+msgstr ""
+
+#. natural scroll combobox
+#: stack-mouse.c:55
+msgid "Natural Scroll"
+msgstr ""
+
+#: data/labwc-tweaks-gtk.desktop.in:4
+msgid "Labwc Config"
+msgstr ""
+
+#: data/labwc-tweaks-gtk.desktop.in:5
+msgid "Labwc Configuration"
+msgstr ""
+
+#: data/labwc-tweaks-gtk.desktop.in:6
+msgid "Configure settings for Labwc"
+msgstr ""

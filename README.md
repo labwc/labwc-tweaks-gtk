@@ -29,3 +29,14 @@ If you find it a useful tool and want to expand its scope, feel free.
 ### packages
 
 [![Packaging status](https://repology.org/badge/vertical-allrepos/labwc-tweaks.svg)](https://repology.org/project/labwc-tweaks/versions)
+
+### translation
+
+See [NLS instructions](./NLS.md) for information for **translators** to translate
+using [Weblate] or pull request and **code contributor** guidelines.
+
+#### translation status
+
+![status badge](https://hosted.weblate.org/widget/labwc-tweaks-gtk/multi-green.svg)
+
+[Weblate]: https://hosted.weblate.org/projects/labwc-tweaks-gtk/

@@ -1,0 +1,104 @@
+# labwc-tweaks-gtk pot file
+# Copyright (C) 2024
+# This file is distributed under the same license as the labwc-tweaks-gtk package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: labwc-tweaks-gtk 0.1.0\n"
+"Report-Msgid-Bugs-To: 01micko@gmail.com\n"
+"POT-Creation-Date: 2024-10-20 09:34+1000\n"
+"PO-Revision-Date: 2024-10-29 10:30+0000\n"
+"Last-Translator: Abdullah Albaroty <albaroty@gmail.com>\n"
+"Language-Team: Arabic <https://hosted.weblate.org/projects/labwc-tweaks-gtk/"
+"labwc-tweaks-gtk/ar/>\n"
+"Language: ar\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
+"&& n%100<=10 ? 3 : n%100>=11 ? 4 : 5;\n"
+"X-Generator: Weblate 5.8.2-dev\n"
+
+#. bottom buttons
+#: main.c:45
+msgid "Update"
+msgstr "حدث"
+
+#: main.c:48
+msgid "Quit"
+msgstr "أخرج"
+
+#: stack-appearance.c:15
+msgid "Appearance"
+msgstr "المظهر"
+
+#: stack-appearance.c:26
+msgid "Openbox Theme"
+msgstr "سمة أوبن بوكس"
+
+#. corner radius spinbutton
+#: stack-appearance.c:45
+msgid "Corner Radius"
+msgstr "نصف قطر الأركان"
+
+#. button layout
+#: stack-appearance.c:54
+msgid "Button Layout"
+msgstr "تخطيط الزر"
+
+#. show title?
+#: stack-appearance.c:62
+msgid "Show Title"
+msgstr "اعرض العنوان"
+
+#. drop shadows
+#: stack-appearance.c:73
+msgid "Drop Shadows"
+msgstr "أسقط الظلال"
+
+#: stack-appearance.c:86
+msgid "Gtk Theme"
+msgstr "سمة جِ تِ كِ"
+
+#: stack-appearance.c:108
+msgid "Icon Theme"
+msgstr "سمة الأيقونة"
+
+#: stack-lang.c:18
+msgid "Language & Region"
+msgstr "اللغة والمنطقة"
+
+#: stack-lang.c:30
+msgid "Keyboard Layout"
+msgstr "تخطيط لوحة المفاتيح"
+
+#: stack-mouse.c:15
+msgid "Mouse & Touchpad"
+msgstr "الفأرة ولوحة اللمس"
+
+#: stack-mouse.c:27
+msgid "Cursor Theme"
+msgstr "سمة المؤشر"
+
+#. cursor size spinbutton
+#: stack-mouse.c:46
+msgid "Cursor Size"
+msgstr "حجم المؤشر"
+
+#. natural scroll combobox
+#: stack-mouse.c:55
+msgid "Natural Scroll"
+msgstr "تمرير طبيعي"
+
+#: data/labwc-tweaks-gtk.desktop.in:4
+msgid "Labwc Config"
+msgstr "تكوين Labwc"
+
+#: data/labwc-tweaks-gtk.desktop.in:5
+msgid "Labwc Configuration"
+msgstr "تَكوين Labwc"
+
+#: data/labwc-tweaks-gtk.desktop.in:6
+msgid "Configure settings for Labwc"
+msgstr "تكوين الإعدادات لـ Labwc"

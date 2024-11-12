@@ -20,6 +20,9 @@ spawn_sync(char const *command)
 static const char
 *first_field(const char *s, char delim)
 {
+	if (!s) {
+		return NULL;
+	}
 	char *p = strchr(s, delim);
 	if (p) {
 		*p = '\0';

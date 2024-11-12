@@ -86,6 +86,13 @@ environment_get(char *buffer, size_t size, const char *key)
 void
 environment_set(const char *key, const char *value)
 {
+	if (!key || !*key) {
+		return;
+	}
+	if (!value || !*value) {
+		return;
+	}
+
 	/* set cursor for labwc  - should cover 'replace' or 'append' */
 	char xcur[4096] = {0};
 	strcpy(xcur, key);

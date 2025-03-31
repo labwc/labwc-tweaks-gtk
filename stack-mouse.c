@@ -46,7 +46,7 @@ stack_mouse_init(struct state *state, GtkWidget *stack)
 	widget = gtk_label_new(_("Cursor Size"));
 	gtk_widget_set_halign(widget, GTK_ALIGN_START);
 	gtk_grid_attach(GTK_GRID(grid), widget, 0, row, 1, 1);
-	GtkAdjustment *cursor_adjustment = gtk_adjustment_new(0, 0, 512, 1, 2, 0);
+	GtkAdjustment *cursor_adjustment = gtk_adjustment_new(24, 16, 60, 1, 2, 0);
 	state->widgets.cursor_size = gtk_spin_button_new(GTK_ADJUSTMENT(cursor_adjustment), 1, 0);
 	gtk_spin_button_set_value(GTK_SPIN_BUTTON(state->widgets.cursor_size), g_settings_get_int(state->settings, "cursor-size"));
 	gtk_grid_attach(GTK_GRID(grid), state->widgets.cursor_size, 1, row++, 1, 1);

@@ -73,6 +73,7 @@ update(GtkWidget *widget, gpointer data)
 	set_value(state->settings, "icon-theme", COMBO_TEXT(state->widgets.icon_theme_name));
 
 	/* ~/.config/labwc/environment */
+	environment_set("GTK_THEME", COMBO_TEXT(state->widgets.gtk_theme_name));
 	environment_set("XCURSOR_THEME", COMBO_TEXT(state->widgets.cursor_theme_name));
 	environment_set_num("XCURSOR_SIZE", SPIN_BUTTON_VAL_INT(state->widgets.cursor_size));
 	environment_set("XKB_DEFAULT_LAYOUT", first_field(COMBO_TEXT(state->widgets.keyboard_layout), ' '));

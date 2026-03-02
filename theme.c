@@ -188,44 +188,72 @@ static struct {
 
 #define ARRAY_SIZE(x) (sizeof(x) / sizeof((x)[0]))
 
+static void
+process_single_prefix(struct themes *themes, const char *middle, const char *end,
+		const char *prefix, const char *sub_dir)
+{
+	int ret;
+	char path[4096];
+	if (prefix) {
+		if (*prefix == '\0') {
+			return;
+		}
+		ret = snprintf(path, sizeof(path), "%s/%s/%s", prefix, sub_dir, middle);
+	} else {
+		ret = snprintf(path, sizeof(path), "%s/%s", sub_dir, middle);
+	}
+	if (ret < 0) {
+		return;
+	}
+	if (end) {
+		/*
+		 * Add theme <themename> if
+		 * "$DATA_DIR/@middle/<themename>/@end" exists
+		 */
+		process_dir(themes, path, end);
+	} else {
+		/*
+		 * Add icon theme iff "$DATA_DIR/@middle/<themename>/"
+		 * contains a subdirectory other than "cursors".
+		 * Note: searching for index.theme only is not good
+		 * enough because some cursor themes contain the same
+		 * file and some themes contain both cursors and icons.
+		 */
+		add_theme_if_icon_theme(themes, path);
+	}
+}
+
 void
 theme_find(struct themes *themes, const char *middle, const char *end)
 {
-	char path[4096];
-	int ret;
 	for (uint32_t i = 0; i < ARRAY_SIZE(dirs); ++i) {
-		if (dirs[i].prefix) {
-			char *prefix = getenv(dirs[i].prefix);
-			if (!prefix) {
-				continue;
-			}
-			ret = snprintf(path, sizeof(path), "%s/%s/%s", prefix, dirs[i].path, middle);
-			if (ret < 0) {
-				return;
-			}
-		} else {
-			ret = snprintf(path, sizeof(path), "%s/%s", dirs[i].path, middle);
-			if (ret < 0) {
-				return;
-			}
+		if (!dirs[i].prefix) {
+			process_single_prefix(themes, middle, end, NULL, dirs[i].path);
+			continue;
 		}
 
-		if (end) {
-			/*
-			 * Add theme <themename> if
-			 * "$DATA_DIR/@middle/<themename>/@end" exists
-			 */
-			process_dir(themes, path, end);
-		} else {
-			/*
-			 * Add icon theme iff "$DATA_DIR/@middle/<themename>/"
-			 * contains a subdirectory other than "cursors".
-			 * Note: searching for index.theme only is not good
-			 * enough because some cursor themes contain the same
-			 * file and some themes contain both cursors and icons.
-			 */
-			add_theme_if_icon_theme(themes, path);
+		const char *prefix = getenv(dirs[i].prefix);
+		if (!prefix) {
+			continue;
 		}
+		char *val = strdup(prefix);
+		if (!val) {
+			continue;
+		}
+		char *p = val;
+		char *start = val;
+		while (*p) {
+			if (*p == ':') {
+				*p = '\0';
+				process_single_prefix(themes, middle, end, start, dirs[i].path);
+				start = p + 1;
+			}
+			p++;
+		}
+		if (start != p) {
+			process_single_prefix(themes, middle, end, start, dirs[i].path);
+		}
+		free(val);
 	}
 
 	/*

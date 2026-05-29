@@ -23,6 +23,7 @@ stack_appearance_init(struct state *state, GtkWidget *stack)
 	/* openbox theme combobox */
 	struct themes openbox_themes = { 0 };
 	theme_find(&openbox_themes, "themes", "openbox-3/themerc");
+	theme_find(&openbox_themes, "themes", "labwc/themerc");
 	widget = gtk_label_new(_("Openbox Theme"));
 	gtk_widget_set_halign(widget, GTK_ALIGN_START);
 	gtk_grid_attach(GTK_GRID(grid), widget, 0, row, 1, 1);

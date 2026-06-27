@@ -66,8 +66,13 @@ main(int argc, char **argv)
 
 	/* read/create config file */
 	char filename[4096];
-	char *home = getenv("HOME");
-	snprintf(filename, sizeof(filename), "%s/%s", home, ".config/labwc/rc.xml");
+	char *dir = getenv("LABWC_CONFIG_DIR");
+	if (dir) {
+		snprintf(filename, sizeof(filename), "%s/%s", dir, "rc.xml");
+	} else {
+		char *home = getenv("HOME");
+		snprintf(filename, sizeof(filename), "%s/%s", home, ".config/labwc/rc.xml");
+	}
 	xml_init(filename);
 	xml_setup_nodes();
 

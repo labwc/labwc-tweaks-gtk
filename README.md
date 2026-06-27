@@ -9,6 +9,8 @@ purposes of testing labwc during development. Don't expect too much :smile:
 If you install labwc-gtktheme.py and set labwc-theme to GTK it'll
 automatically sync with the selected GTK theme.
 
+Use environment variable `LABWC_CONFIG_DIR` to specify a non-standard location for configuration files.
+
 ### build
 
 ```

@@ -58,8 +58,13 @@ void
 environment_get(char *buffer, size_t size, const char *key)
 {
 	char filename[4096];
-	snprintf(filename, sizeof(filename), "%s/%s", getenv("HOME"), ".config/labwc/environment");
-
+	char *dir = getenv("LABWC_CONFIG_DIR");
+	if (dir) {
+		snprintf(filename, sizeof(filename), "%s/%s", dir, "environment");
+	} else {
+		snprintf(filename, sizeof(filename), "%s/%s", getenv("HOME"), ".config/labwc/environment");
+	}
+	
 	char *value = NULL;
 	char *line = NULL;
 	size_t len = 0;
@@ -99,9 +104,15 @@ environment_set(const char *key, const char *value)
 	strcat(xcur, "=");
 	char filename[4096];
 	char bufname[4096];
-	char *home = getenv("HOME");
-	snprintf(filename, sizeof(filename), "%s/%s", home, ".config/labwc/environment");
-	snprintf(bufname, sizeof(bufname), "%s/%s", home, ".config/labwc/buf");
+	char *dir = getenv("LABWC_CONFIG_DIR");
+	if (dir) {
+		snprintf(filename, sizeof(filename), "%s/%s", dir, "environment");
+		snprintf(bufname, sizeof(bufname), "%s/%s", dir, "buf");
+	} else {
+		char *home = getenv("HOME");
+		snprintf(filename, sizeof(filename), "%s/%s", home, ".config/labwc/environment");
+		snprintf(bufname, sizeof(bufname), "%s/%s", home, ".config/labwc/buf");
+	}
 	FILE *fe = fopen(filename, "r");
 	FILE *fw = fopen(bufname, "a");
 	if ((fe == NULL) || (fw == NULL)) {
